@@ -1,0 +1,9 @@
+<p>random</p>
+  <div class="row">
+      {{#each responseFromApi}} 
+        <h1>{{this.name}}</h1>
+        <img src={{this.image_url}} alt="beerpic">
+        <h2>{{this.tagline}}</h2>
+        <h3>{{this.description}}</h3>
+      {{/each}}
+  </div>
