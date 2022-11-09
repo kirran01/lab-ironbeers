@@ -16,11 +16,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/beers', (req, res, next) => {
-  console.log('hi')
   punkAPI
     .getBeers()
     .then(beersFromApi => {
-      res.render("beers.hbs", { beersFromApi })
+      res.render('beers.hbs', { beersFromApi });
     })
     .catch(error => console.log(error));
 });
